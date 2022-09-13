@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <title>Malamaal Chai</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind-->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                pri: '#5cbd95',
+                sec:'#05386b',
+                ter:'#379683',
+                beige:'#edf5e1'
+              }
+            }
+          }
+        }
+      </script>
+</head>     
+<body>
+    <!-- <header class="text-sec fixed w-screen top-0 body-font">
+        <nav class="flex flex-col p-4">
+            <h1 class="mx-auto mb-4 text-white text-4xl">Malamaal Chai</h1>
+        <ul class="md:flex mx-auto gap-8 text-2xl hidden ">
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">About</a> </li>
+            <li><a href="#">Scheme</a> </li>
+            <li><a href="#">Menu</a> </li>
+            <li><a href="#">Franchise</a> </li>
+        </ul>
+        </nav>
+            
+    </header> -->
+
+    <!-- --------------------NAVBAR---------------------- -->
+    <header class="fixed w-screen">
+      <!-- lg+ -->
+      <div class="bg-beige border-b border-gray-200">
+          <div class="px-4 mx-auto sm:px-6 lg:px-8">
+              <nav class="relative flex items-center justify-between h-16 lg:h-20">
+                  <div class="hidden lg:flex lg:items-center lg:space-x-5">
+                      <a href="#hero" title="" class="text-xl font-medium text-black hover:text-ter"> Home </a>
+  
+                      <a href="#about" title="" class="text-xl  font-medium text-black hover:text-ter"> About </a>
+  
+                      <a href="#scheme" title="" class="text-xl  font-medium text-black hover:text-ter"> Scheme </a>
+  
+                      <a href="#menu" title="" class="text-xl  font-medium text-black hover:text-ter"> Menu </a>
+
+                      <a href="#contact" title="" class="text-xl  font-medium text-black hover:text-ter"> Contact </a>
+                  </div>
+  
+                  <div class="lg:absolute lg:-translate-x-1/2 lg:inset-y-5 lg:left-1/2">
+                      <div class="flex-shrink-0">
+                          <a href="#" title="" class="flex">
+                              <!-- <img class="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" /> -->
+                              <h1 class="text-2xl sm:text-4xl">Malamaal Chai</h1>
+                          </a>
+                      </div>
+                  </div>
+  
+                  <button type="button" class="flex items-center justify-center ml-auto text-white bg-black rounded-full py-2 px-3 lg:hidden">
+                      Franchise
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 " viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                  </button>
+  
+                  <button id="hamburger" type="button" class="inline-flex p-2 ml-5 text-black transition-all duration-200 rounded-md lg:hidden  ">
+                      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                      </svg>
+                  </button>
+  
+                  <div class="hidden lg:flex lg:items-center lg:space-x-10">
+                      <!-- <a href="#" title="" class="text-base font-medium text-black"> Sign up </a> -->
+  
+                      <!-- <a href="#" title="" class="text-base font-medium text-black"> Sign in </a> -->
+  
+                      <a href="#" title="" class="flex items-center justify-center py-2 px-3 rounded-full text-beige bg-black ">
+                          Franchise
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 " viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                          </svg>
+                      </a>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  
+      <!-- xs to lg -->
+      <nav id="mobileNav" class="py-4 bg-beige hidden opacity-0 lg:hidden">
+          <div class="px-4 mx-auto sm:px-6 lg:px-8">
+              <!-- <div class="flex items-center justify-end">
+                  <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Menu</p>
+  
+                  <button id="cross" type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md focus:bg-gray-100 hover:bg-gray-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                  </button>
+              </div> -->
+  
+              <div class="mt-6">
+                  <div class="flex flex-col space-y-2">
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> Home </a>
+  
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> About</a>
+  
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> Scheme </a>
+  
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> Contact </a>
+                  </div>
+  
+                  <hr class="my-4 border-gray-200" />
+  
+                  <!-- <div class="flex flex-col space-y-2">
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> Sign up </a>
+  
+                      <a href="#" title="" class="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600"> Sign in </a>
+                  </div> -->
+              </div>
+          </div>
+      </nav>
+  </header>
+  
+
+    <div id="container" class=" w-full text-white">
+      <div class="bg-pri w-full fixed top-0  h-full" id="particles-js"></div>
+      
+          <!-- #################################################################
+                          hero section 
+          ############################################################                 -->
+          <section id="hero">
+            <h1>Im in hero</h1>
+          </section>
+        <!-- #################################################################
+                        About Us 
+        ############################################################ -->
+       <section id="about" class="flex flex-col py-20 px-8">
+            <h1 class="mx-auto text-5xl  text-sec m-8" >Who are we</h1>
+            <p class="text-justify text-2xl text-ter mb-10 sm:mx-10 lg:mx-40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor dicta fuga eos dolorum ex consequuntur at expedita odio! Voluptatem, nesciunt. Suscipit reprehenderit dolore porro odio aperiam inventore! Facilis ex voluptatibus, sint repudiandae, in impedit voluptas accusantium aliquid sit qu</p>
+       </section>
+       
+       <!-- #################################################################
+                    Scheme
+    ############################################################ -->
+    
+    <section id="scheme" class="pt-12 ">
+      <h1 class="mx-auto text-5xl text-center text-sec mb-12" >Malamaal Kaise Bane</h1>
+      <div id="innerScheme" >
+        <div id="scratchCard">
+          <div id="scratch" class="m-8 sm:m-24"></div>
+        </div>
+        <!-- The Timeline -->
+        
+        <ul class="timeline text-pri my-24">
+        
+          <!-- Item 1 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag text-4xl">Buy</span>
+                <!-- <span class="time-wrapper"><span class="time">2013 - present</span></span> -->
+              </div>
+              <div class="desc text-sec rounded-full text-2xl">Buy anything from our outlets.</div>
+            </div>
+          </li>
+          
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="flag text-4xl">Scratch</span>
+                <!-- <span class="time-wrapper"><span class="time">2011 - 2013</span></span> -->
+              </div>
+              <div class="desc text-sec text-2xl rounded-full">Get a scratch card everytime you buy.</div>
+            </div>
+          </li>
+        
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag text-4xl ">Win</span>
+                <!-- <span class="time-wrapper"><span class="time">2008 - 2011</span></span> -->
+              </div>
+              <div class="desc text-sec text-2xl rounded-full">Win amazing prizes.</div>
+            </div>
+          </li>
+          
+        </ul>
+        </div>
+      </section>
+
+      <!-- ################################MENU######################### -->
+      <section id="menu" class="food-menu">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <div class="card">
+              <img src="https://images.news18.com/ibnlive/uploads/2021/03/1614664667_untitled-design-3.jpg?impolicy=website" alt=""><span>1</span>
+              <h3>Soulfly Soup</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg" alt=""><span>2</span>
+              <h3>Metallica Meatballs</h3>
+              <p>Ipsa mollitia libero consectetur numquam delectus odit illo?</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="https://www.thespruceeats.com/thmb/yjIQQytfjzaCRZ7tA6oBcXAapJc=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-make-homemade-french-fries-2215971-hero-01-02f62a016f3e4aa4b41d0c27539885c3.jpg" alt=""><span>3</span>
+              <h3>Skitarg Shrimp</h3>
+              <p>Pariatur vero numquam repellendus asperiores itaque nostrum quasi.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="https://shwetainthekitchen.com/wp-content/uploads/2022/01/bhel-puri.jpg" alt=""><span>4</span>
+              <h3>Black Sabbath Burger</h3>
+              <p>Consequatur cupiditate dicta, blanditiis obcaecati provident sequi animi.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/gobi-manchurian-cauliflower-manchurian.jpg" alt=""><span>5</span>
+              <h3>Prong Pasta</h3>
+              <p>Pariatur optio vel aliquid similique delectus sed alias.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles.jpg.webp" alt=""><span>6</span>
+              <h3>Led Zeppelin Zesty Fries</h3>
+              <p>Eaque itaque qui est non quia voluptas sapiente.jkdhakk hdawdjk asbd jkab</p>
+            </div>
+          </li>
+          
+        </ul>
+      </section>
+      
+      <!-- Uncomment to review the component in a "sidebar" context -->
+      
+      <!-- <section class="food-menu-sidebar">
+      
+        <aside class="food-menu">
+          <h2>Menu</h2>
+          <ul>
+            <li>
+              <div class="card">
+                <img src="https://www.nika.si/f/pics/68250/016861794224_s4.jpg" alt=""><span>1</span>
+                <h3>Soulfly Soup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://img.discogs.com/kBTt8-99HXCV5t2HwIyWnC556B0=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6579870-1422428594-3845.jpeg.jpg" alt=""><span>2</span>
+                <h3>Metallica Meatballs</h3>
+                <p>Ipsa mollitia libero consectetur numquam delectus odit illo?</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://t2.genius.com/unsafe/1796x0/https%3A%2F%2Fimages.genius.com%2F34fa1cb646386a4e93be25d066cf68b8.500x500x1.jpg" alt=""><span>3</span>
+                <h3>Skitarg Shrimp</h3>
+                <p>Pariatur vero numquam repellendus asperiores itaque nostrum quasi.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://merchbar.imgix.net/product/105/6519/4001795014738/PKSHB3K123-1-34191077.png?w=1280&h=1280&quality=60&auto=compress%252Cformat" alt=""><span>4</span>
+                <h3>Black Sabbath Burger</h3>
+                <p>Consequatur cupiditate dicta, blanditiis obcaecati provident sequi animi.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Prong-whosefist.jpg" alt=""><span>5</span>
+                <h3>Prong Pasta</h3>
+                <p>Pariatur optio vel aliquid similique delectus sed alias.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://lite-images-i.scdn.co/image/ab67706c0000da847d2a8470454b3ecf69b6e7e4" alt=""><span>6</span>
+                <h3>Led Zeppelin Zesty Fries</h3>
+                <p>Eaque itaque qui est non quia voluptas sapiente.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://img.discogs.com/1K9heoto4schFSGwWw1sxVIWZ5Q=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4329948-1361910904-9563.jpeg.jpg" alt=""><span>7</span>
+                <h3>Dark Tranquility Dogs</h3>
+                <p>Repellat assumenda modi inventore ipsam? Officia, ullam ipsam!</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81R9wQGYjpL._SL1500_.jpg" alt=""><span>8</span>
+                <h3>Orden Ogan Omelet</h3>
+                <p>Reprehenderit quo distinctio odit fugit? Iste, suscipit voluptas.</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://www.ilikeyouroldstuff.com/sites/g/files/g2000009801/files/inline-images/killers.jpg" alt=""><span>9</span>
+                <h3>Iron Maiden Icee</h3>
+                <p>Vero laudantium itaque neque vitae corrupti nam eligendi?</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+        <article>
+          <h2>Lorem, ipsum dolor.</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea facilis dolorem ut reprehenderit quidem dolorum eius quia harum maiores dolor aliquam accusamus nesciunt eligendi enim nihil, voluptates impedit voluptas expedita?</p>
+          <p>Id ullam explicabo, quas recusandae sunt eos, dignissimos omnis eaque quis vel culpa mollitia quia facilis, corporis error. Iure, dolor? Quo temporibus id esse adipisci, accusantium eligendi accusamus natus mollitia.</p>
+          <p>Quos sapiente repudiandae deserunt aliquam dolor amet hic incidunt ducimus, eaque quia debitis, aliquid veritatis a. Ipsum sapiente esse quas quasi reiciendis quod, eius beatae aut numquam, est, dolores praesentium?</p>
+        </article>
+      </section> -->
+      <!-- ###################Testimonial######################### -->
+      <section id="testimonial" class="text-sec body-font">
+        <div class="container px-10 py-24 mx-auto">
+          <h1 class="text-sec text-center text-5xl my-12">Testimonials</h1>
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-beige mt-6 mb-4"></span>
+                <h2 class="text-black font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
+                <!-- <p class="text-gray-500">Senior Product Designer</p> -->
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-beige mt-6 mb-4"></span>
+                <h2 class="text-black font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
+                <!-- <p class="text-gray-500">UI Develeoper</p> -->
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-beige mt-6 mb-4"></span>
+                <h2 class="text-black font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
+                <!-- <p class="text-gray-500">CTO</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ###################contact us######################### -->
+      <section id="contact" class="text-ter bg-beige  body-font relative">
+        <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+          <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <iframe width="100%" height="100%" title="map" class="absolute inset-0" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" ></iframe>
+            <div class="bg-beige relative flex flex-wrap py-6 rounded shadow-md">
+              <div class="lg:w-1/2 px-6">
+                <h2 class="title-font font-semibold text-sec tracking-widest text-xs">ADDRESS</h2>
+                <p class="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+              </div>
+              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2 class="title-font font-semibold text-sec tracking-widest text-xs">EMAIL</h2>
+                <a class=" leading-relaxed">example@email.com</a>
+                <h2 class="title-font font-semibold text-sec tracking-widest text-xs mt-4">PHONE</h2>
+                <p class="leading-relaxed">123-456-7890</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 md:w-1/2 flex  flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <h2 class=" text-4xl mb-4 font-medium text-center text-sec title-font">Contact Us</h2>
+            <div class="relative mb-4">
+              <label for="name" class="leading-7 text-l">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-sec rounded border border-sec  text-base outline-none text-beige py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+              <label for="email" class="leading-7 text-sm ">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-sec rounded border border-sec  text-base outline-none text-beige py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+              <label for="message" class="leading-7 text-sm ">Message</label>
+              <textarea id="message" name="message" class="w-full bg-sec rounded border border-sec  h-32 text-base outline-none text-beige py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+            <button class="text-pri bg-sec border-0 py-2 px-6 focus:outline-none  rounded text-lg">Send</button>
+            <!-- <p class="text-xs text-gray-400 text-opacity-90 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ###################################FOOTER############################## -->
+      <footer class="text-gray-400 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg> -->
+            <span class="ml-3 text-xl">Malamaal Chai</span>
+          </a>
+          <p class="text-sm text-sec sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2022 Malamaal Chai 
+            <!-- <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a> -->
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-sec">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-sec">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-sec">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-sec">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+
+      </div>
+    
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', './particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+        });
+    </script>
+    <script src="./script.js"></script>
+<!-- ###############ScratchCard############################ -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="./wScratchPad.min.js"></script>
+    <script>
+        $('#scratch').wScratchPad({
+        size        : 50,          // The size of the brush/scratch.
+        bg          : './imgs/scartch_inner.jpg',  // Background (image path or hex color).
+        fg          : './imgs/scratch_outer2.jpg',
+        cursor      : './imgs/coin.png',
+        realtime    : false,       // Calculates percentage in realitime.
+        scratchUp : (e,percent)=>{if(percent>50)$('#scratch').wScratchPad('clear');}
+        });
+        
+    </script>
+</body>
+</html>

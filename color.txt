@@ -1,0 +1,10 @@
+pink----#ec449b
+green---#99f443
+
+
+----------------------------
+d blue-#05386b
+d green-#379683
+bg green- #5cdb95
+lg green-#8ee4af
+biege-#edf5e1
