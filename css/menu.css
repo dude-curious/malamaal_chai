@@ -29,12 +29,12 @@ Container query links:
   padding-top: 8vh;
   padding-bottom: 8vh;
 }
-.food-menu h2 {
+.food-menu h1 {
   margin: 0 auto;
   text-align: center;
   font-size: 4rem;
 }
-.food-menu h2,
+.food-menu h1,
 .food-menu li span {
   color: var(--green);
   /* --text-stroke: 0.005em; */
@@ -146,6 +146,6 @@ Container query links:
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.food-menu-sidebar .food-menu h2 {
+.food-menu-sidebar .food-menu h1 {
   font-size: 3rem;
 }/*# sourceMappingURL=menu.css.map */

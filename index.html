@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
     <title>Malamaal Chai</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/slot_machine.css">
+    <!-- ----------Animate on scroll------------ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind-->
     <script>
         tailwind.config = {
@@ -24,7 +27,7 @@
         }
       </script>
 </head>     
-<body>
+<body >
     <!-- <header class="text-sec fixed w-screen top-0 body-font">
         <nav class="flex flex-col p-4">
             <h1 class="mx-auto mb-4 text-white text-4xl">Malamaal Chai</h1>
@@ -40,7 +43,7 @@
     </header> -->
 
     <!-- --------------------NAVBAR---------------------- -->
-    <header class="fixed w-screen">
+    <header class="sticky top-0 w-full">
       <!-- lg+ -->
       <div class="bg-beige border-b border-gray-200">
           <div class="px-4 mx-auto sm:px-6 lg:px-8">
@@ -131,40 +134,75 @@
       </nav>
   </header>
   
-
-    <div id="container" class=" w-full text-white">
+  
+    <div id="container" class=" w-full text-white overflow-hidden">
       <div class="bg-pri w-full fixed top-0  h-full" id="particles-js"></div>
       
           <!-- #################################################################
                           hero section 
           ############################################################                 -->
-          <section id="hero">
-            <h1>Im in hero</h1>
-          </section>
+          
+            <div id="hero">
+              
+              <section class="py-10 sm:py-16 lg:py-24">
+                  <div class="px-4 mx-auto mt-12  max-w-7xl sm:px-6 lg:px-8">
+                      <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+                          <div >
+                              <h1 class="text-4xl text-black sm:text-6xl lg:text-7xl" data-aos="fade-down" data-aos-duration="500">
+                                  Banna hai 
+                                  <div class="relative inline-flex">
+                                      <span class="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"></span>
+                                      <h1 class="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">Malamaal ?</h1>
+                                  </div>
+                              </h1>
+          
+                              <p class="mt-8 text-base text-sec sm:text-xl" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+          
+                              <div class="mt-10 sm:flex sm:items-center sm:space-x-8" data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
+                                  <a href="#about" title="" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-ter transition-all duration-200 bg-beige " role="button"> Start exploring </a>
+          
+                                  
+                              </div>
+                          </div>
+          
+                          <div>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          </div>
+          
+          
         <!-- #################################################################
                         About Us 
         ############################################################ -->
-       <section id="about" class="flex flex-col py-20 px-8">
-            <h1 class="mx-auto text-5xl  text-sec m-8" >Who are we</h1>
-            <p class="text-justify text-2xl text-ter mb-10 sm:mx-10 lg:mx-40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor dicta fuga eos dolorum ex consequuntur at expedita odio! Voluptatem, nesciunt. Suscipit reprehenderit dolore porro odio aperiam inventore! Facilis ex voluptatibus, sint repudiandae, in impedit voluptas accusantium aliquid sit qu</p>
+       <section id="about" class="flex w-full flex-col py-20 px-8">
+            <h1 class="mx-auto text-5xl  text-sec m-8 heading" >Who are we</h1>
+            <p class="text-justify text-2xl text-ter mb-10 sm:mx-10 lg:mx-40" data-aos="zoom-out"  data-aos-duration="600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor dicta fuga eos dolorum ex consequuntur at expedita odio! Voluptatem, nesciunt. Suscipit reprehenderit dolore porro odio aperiam inventore! Facilis ex voluptatibus, sint repudiandae, in impedit voluptas accusantium aliquid sit qu</p>
        </section>
        
        <!-- #################################################################
                     Scheme
     ############################################################ -->
     
-    <section id="scheme" class="pt-12 ">
-      <h1 class="mx-auto text-5xl text-center text-sec mb-12" >Malamaal Kaise Bane</h1>
+    <section id="scheme" class="pt-12">
+      <div class="text-center mt-12">
+      <h1 class="mx-auto text-5xl inline text-sec mb-12 heading" >Malamaal Kaise Bane</h1>
+      </div>
       <div id="innerScheme" >
-        <div id="scratchCard">
+        <div id="scratchCard" data-aos="fade-right" data-aos-duration="800" >
           <div id="scratch" class="m-8 sm:m-24"></div>
+          <audio id="scratchAudio" >
+            <source src="./audio/scratch1.mp3" type="audio/mpeg">
+            </audio> 
         </div>
         <!-- The Timeline -->
         
-        <ul class="timeline text-pri my-24">
+        <ul class="timeline text-pri my-24"  >
         
           <!-- Item 1 -->
-          <li>
+          <li data-aos="fade-left" data-aos-duration="500">
             <div class="direction-r">
               <div class="flag-wrapper">
                 <span class="flag text-4xl">Buy</span>
@@ -175,7 +213,7 @@
           </li>
           
           <!-- Item 2 -->
-          <li>
+          <li data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
             <div class="direction-l">
               <div class="flag-wrapper">
                 <span class="flag text-4xl">Scratch</span>
@@ -186,7 +224,7 @@
           </li>
         
           <!-- Item 3 -->
-          <li>
+          <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">
             <div class="direction-r">
               <div class="flag-wrapper">
                 <span class="flag text-4xl ">Win</span>
@@ -202,45 +240,47 @@
 
       <!-- ################################MENU######################### -->
       <section id="menu" class="food-menu">
-        <h2>Menu</h2>
+        <div class="text-center mt-8">
+        <h1 class="heading inline mx-auto ">Menu</h1>
+        </div>
         <ul>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-duration="800">
               <img src="https://images.news18.com/ibnlive/uploads/2021/03/1614664667_untitled-design-3.jpg?impolicy=website" alt=""><span>1</span>
               <h3>Soulfly Soup</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
               <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg" alt=""><span>2</span>
               <h3>Metallica Meatballs</h3>
               <p>Ipsa mollitia libero consectetur numquam delectus odit illo?</p>
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="400" data-aos-duration="800">
               <img src="https://www.thespruceeats.com/thmb/yjIQQytfjzaCRZ7tA6oBcXAapJc=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-make-homemade-french-fries-2215971-hero-01-02f62a016f3e4aa4b41d0c27539885c3.jpg" alt=""><span>3</span>
               <h3>Skitarg Shrimp</h3>
               <p>Pariatur vero numquam repellendus asperiores itaque nostrum quasi.</p>
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down"  data-aos-duration="800" >
               <img src="https://shwetainthekitchen.com/wp-content/uploads/2022/01/bhel-puri.jpg" alt=""><span>4</span>
               <h3>Black Sabbath Burger</h3>
               <p>Consequatur cupiditate dicta, blanditiis obcaecati provident sequi animi.</p>
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800" >
               <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/gobi-manchurian-cauliflower-manchurian.jpg" alt=""><span>5</span>
               <h3>Prong Pasta</h3>
               <p>Pariatur optio vel aliquid similique delectus sed alias.</p>
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="400" data-aos-duration="800" >
               <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles.jpg.webp" alt=""><span>6</span>
               <h3>Led Zeppelin Zesty Fries</h3>
               <p>Eaque itaque qui est non quia voluptas sapiente.jkdhakk hdawdjk asbd jkab</p>
@@ -332,9 +372,11 @@
       <!-- ###################Testimonial######################### -->
       <section id="testimonial" class="text-sec body-font">
         <div class="container px-10 py-24 mx-auto">
-          <h1 class="text-sec text-center text-5xl my-12">Testimonials</h1>
+          <div class="text-center my-12">
+          <h1 class="text-sec inline  mx-auto text-5xl  heading">Testimonials</h1>
+          </div>
           <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4" data-aos="flip-down" data-aos-duration="1000">
               <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
                 <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
@@ -343,7 +385,7 @@
                 <!-- <p class="text-gray-500">Senior Product Designer</p> -->
               </div>
             </div>
-            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="200">
               <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
                 <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
@@ -352,7 +394,7 @@
                 <!-- <p class="text-gray-500">UI Develeoper</p> -->
               </div>
             </div>
-            <div class="lg:w-1/3 lg:mb-0 p-4">
+            <div class="lg:w-1/3 lg:mb-0 p-4" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="400">
               <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center inline-block " src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/256/000000/external-testimonial-offline-marketing-inipagistudio-mixed-inipagistudio.png">
                 <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
@@ -365,7 +407,7 @@
         </div>
       </section>
       <!-- ###################contact us######################### -->
-      <section id="contact" class="text-ter bg-beige  body-font relative">
+      <section id="contact" class=" text-ter bg-beige  body-font relative">
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe width="100%" height="100%" title="map" class="absolute inset-0" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" ></iframe>
@@ -383,7 +425,9 @@
             </div>
           </div>
           <div class="lg:w-1/3 md:w-1/2 flex  flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <h2 class=" text-4xl mb-4 font-medium text-center text-sec title-font">Contact Us</h2>
+            <div class="text-center">
+            <h1 class="heading text-4xl mb-4 mx-auto inline font-medium  text-sec title-font">Contact Us</h1>
+            </div>
             <div class="relative mb-4">
               <label for="name" class="leading-7 text-l">Name</label>
               <input type="text" id="name" name="name" class="w-full bg-sec rounded border border-sec  text-base outline-none text-beige py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
@@ -452,20 +496,39 @@
         console.log('callback - particles.js config loaded');
         });
     </script>
-    <script src="./script.js"></script>
+    <script src="./Js/script.js"></script>
 <!-- ###############ScratchCard############################ -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="./wScratchPad.min.js"></script>
+    <script src="./Js/wScratchPad.min.js"></script>
     <script>
+        const playAudio=()=>{
+          document.getElementById("scratchAudio").play();
+        }
         $('#scratch').wScratchPad({
         size        : 50,          // The size of the brush/scratch.
         bg          : './imgs/scartch_inner.jpg',  // Background (image path or hex color).
         fg          : './imgs/scratch_outer2.jpg',
         cursor      : './imgs/coin.png',
         realtime    : false,       // Calculates percentage in realitime.
-        scratchUp : (e,percent)=>{if(percent>50)$('#scratch').wScratchPad('clear');}
+        scratchUp : (e,percent)=>{if(percent>50)$('#scratch').wScratchPad('clear');playAudio()}
         });
         
+    </script>
+    <script src="./Js/slot_machine.js"></script>
+    <!-- ----------Animate on Scroll--------- -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        mirror:true
+      });
+    </script>
+    <!-- -------------Scroll out ------------- -->
+    <script src="./Js/scroll-out.js"></script>
+    <script>
+      ScrollOut({
+        targets:'h1',
+        
+      })
     </script>
 </body>
 </html>
