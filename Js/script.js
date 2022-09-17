@@ -1,7 +1,7 @@
 // -----------preloader-----------
 window.addEventListener('load',()=>{
     const preloader=document.querySelector(".preloader");
-    preloader.style.opacity=0;
+    preloader.style="transform:scaleY(0)";
 
     window.setTimeout(()=>{
     preloader.style.display='none';
@@ -27,3 +27,24 @@ hamburger.addEventListener('click',()=>{
 
     }
 });
+
+const header=document.querySelector("header");
+const head=document.querySelector("header .head");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      header.classList.add('bg-beige');
+      header.classList.remove('bg-transparent');
+      head.classList.remove('text-black');
+      head.classList.add('text-ter');
+      mobileNav.classList.add('bg-beige')
+    } else {
+        header.classList.remove('bg-beige');
+        header.classList.add('bg-transparent');
+        head.classList.add('text-black');
+        head.classList.remove('text-ter');
+        mobileNav.classList.remove('bg-beige')
+    }
+  }
