@@ -1,3 +1,15 @@
+// -----------preloader-----------
+window.addEventListener('load',()=>{
+    const preloader=document.querySelector(".preloader");
+    preloader.style.opacity=0;
+
+    window.setTimeout(()=>{
+    preloader.style.display='none';
+
+    },1000)
+
+})
+
 // ----------navbar----------------
 const hamburgerPath=document.querySelector("#hamburger svg path");
 const hamburger=document.querySelector("#hamburger");

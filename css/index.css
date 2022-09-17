@@ -18,6 +18,16 @@ html {
     background-color: #8ee4af;
 }
 
+/* ----------------Preloader--------------- */
+.preloader{
+  display: grid;
+  opacity: 1;
+  place-items: center;
+  transition: 1s ease-in;
+}
+
+
+
 h1{
   color: var(--pri);
 }
@@ -79,15 +89,20 @@ h1{
   }
   /* ##########Nav bar############ */
   header{
-    z-index: 99;
+    z-index: 9;
     background-color: var(--pri);
   }
   #mobileNav{
     transition: opacity 1s ease-in;
   }
   /* ##########HERO SECTION############ */
+#coffee lottie-player{
+  position: absolute;
+  top: -5em;
+  left: -4em;
 
 
+}
 
 /* ###############ABOUT#################### */
 #about{
@@ -177,6 +192,7 @@ h1{
 
 .timeline li {
   padding: 1em 0;
+  z-index: 1;
 }
 
 .timeline li:after {
