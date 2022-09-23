@@ -10,7 +10,6 @@ Container query links:
 - Primer on CQ: https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/
 */
 
-
 .food-menu,
 .food-menu * {
   box-sizing: border-box;
@@ -20,7 +19,7 @@ Container query links:
 .food-menu {
   --hs: 220, 15%;
   /* --red: hsl(15, 90%, 45%); */
-  --green: #05386b;
+  --green: hsl(327, 88%, 15%);
   --black-10: hsl(var(--hs), 10%);
   --black-20: hsl(var(--hs), 20%);
   --white: hsl(var(--hs), 85%);
@@ -60,8 +59,8 @@ Container query links:
   container-name: list-item;
 }
 .food-menu .card {
-  /* background-color: var(--black-20); */
-  color: #05386b;
+  background-color: hsl(327, 88%, 80%);
+  color: hsl(327, 88%, 15%);
   box-shadow: 0 0 1rem -0.25rem black;
   display: grid;
   grid-template-areas: "cover title" "cover description";
@@ -80,7 +79,9 @@ Container query links:
   grid-area: title;
 }
 .food-menu .card p {
+  color: hsl(327, 88%, 25%);
   grid-area: description;
+  font-family: 'Merienda', cursive;
 }
 .food-menu .card h3{
   font-size: 1.5rem;
@@ -109,7 +110,7 @@ Container query links:
 }
 .food-menu .card span::before {
   content: "";
-  background-color: #5cdb95;
+  background-color: hsl(327, 88%, 75%);
   box-shadow: 0 0 1rem -0.1rem var(--green);
   position: absolute;
   inset: 0;

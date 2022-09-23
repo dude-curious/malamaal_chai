@@ -8,3 +8,5 @@ d green-#379683
 bg green- #5cdb95
 lg green-#8ee4af
 biege-#edf5e1
+
+"https://img.icons8.com/fluency/48/000000/rupee.png"

@@ -30,23 +30,19 @@ hamburger.addEventListener('click',()=>{
     }
 });
 
-const header=document.querySelector("header");
-const head=document.querySelector("header .head");
+// const header=document.querySelector("header");
+// const head=document.querySelector("header .head");
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      header.classList.add('bg-beige');
-      header.classList.remove('bg-transparent');
-      head.classList.remove('text-black');
-      head.classList.add('text-ter');
-      mobileNav.classList.add('bg-beige')
-    } else {
-        header.classList.remove('bg-beige');
-        header.classList.add('bg-transparent');
-        head.classList.add('text-black');
-        head.classList.remove('text-ter');
-        mobileNav.classList.remove('bg-beige')
-    }
-  }
+// function scrollFunction() {
+//     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//       header.classList.add('bg-beige');
+//       header.classList.remove('bg-transparent');
+//       mobileNav.classList.add('bg-beige')
+//     } else {
+//         header.classList.remove('bg-beige');
+//         header.classList.add('bg-transparent');
+//         mobileNav.classList.remove('bg-beige')
+//     }
+//   }
