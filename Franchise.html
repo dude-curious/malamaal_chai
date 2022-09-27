@@ -102,7 +102,7 @@
             />
 
             <select name="state" required id="state" class="w-full p-4 pr-12 text-sm text-pri border-beige rounded-lg shadow-sm">
-                <option value="none" disabled selected hidden>Select Your State</option>
+                <option value="">Select Your State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -147,11 +147,11 @@
                     placeholder="Enter Your Age"
                     required
                     title="Enter Valid Age"
-                    pattern="[1][0-9]"
+                    pattern="[0-9]{2}"
                 />
 
                 <select name="occupation" required id="occupation" class="w-full p-4 pr-12 text-sm text-pri border-beige rounded-lg shadow-sm">
-                    <option value="none" disabled selected hidden>Select Your Occupation</option>
+                    <option value="">Select Your Occupation</option>
                     <option value="Student">Student</option>
                     <option value="Job">Job</option>
                     <option value="Business">Business</option>
