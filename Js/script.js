@@ -46,3 +46,4 @@ hamburger.addEventListener('click',()=>{
 //         mobileNav.classList.remove('bg-beige')
 //     }
 //   }
+
