@@ -9,7 +9,16 @@ Container query links:
 - CSSWG GitHub Project: https://github.com/w3c/csswg-drafts/projects/18
 - Primer on CQ: https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/
 */
-
+.moneyBg{
+  background-repeat: space;
+  background-size: 150px;
+  background-image: url("../imgs/currency notes/c2000.jpeg");
+}
+@media screen and (max-width:768px) {
+  .moneyBg{
+    background-size: 100px;
+  }
+}
 .food-menu,
 .food-menu * {
   box-sizing: border-box;
