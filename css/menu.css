@@ -16,6 +16,7 @@ Container query links:
 }
 @media screen and (max-width:768px) {
   .moneyBg{
+  background-repeat: repeat-x;
     background-size: 100px;
   }
 }
