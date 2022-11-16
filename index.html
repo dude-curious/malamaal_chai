@@ -1024,8 +1024,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./Js/wScratchPad.min.js"></script>
-    <!-- ##############Confetti party.js################# -->
-    <script src="./Js/party.min.js"></script>
+
     <script>
       $("#scratch").wScratchPad({
         size: 50, // The size of the brush/scratch.
@@ -1033,9 +1032,9 @@
         fg: "./imgs/scratch_outer2.jpg",
         cursor: "./imgs/coin.png",
         realtime: false, // Calculates percentage in realitime.
-        scratchUp: (e, percent) => {
-          if (percent > 50) $("#scratch").wScratchPad("clear");
-        },
+        // scratchUp: (e, percent) => {
+        //   if (percent > 50) $("#scratch").wScratchPad("clear");
+        // },
       });
     </script>
 
